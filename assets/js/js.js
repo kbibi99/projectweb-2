@@ -5,6 +5,7 @@
 
 $(function() {
 
+
     var $formLogin = $('#login-form');
     var $formLost = $('#lost-form');
     var $formRegister = $('#register-form');
@@ -49,17 +50,56 @@ $(function() {
                 return false;
                 break;
             case "lost-form":
-                var $ls_email=$('#lost_email').val();
-                if ($ls_email == "ERROR") {
-                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Send error");
-                } else {
-                    msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "Send OK");
-                }
+                var data = $formLost.serialize();
+            //    console.log(data);
+                var request= $.ajax({
+                    type : "POST",
+                    url  : "/projet/reset_pass_process.php",
+                    data : data,
+                    dataType: "html"});
+                request.done(function(response)
+                {
+                    console.log(response);
+                    if(response=="ok"){
+                        msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "success", "glyphicon-ok", "An email has been sent to your email address");
+                        setTimeout(' window.location.href = "index.php"; ',5000);
+                    }
+                    else{
+
+                        msgChange($('#div-lost-msg'), $('#icon-lost-msg'), $('#text-lost-msg'), "error", "glyphicon-remove", "Invalid mail adress");
+                    }
+
+                });
+                request.fail(function( jqXHR, textStatus ) {
+                    alert( "Request failed: " + textStatus );
+                });
+
                 return false;
                 break;
             case "register-form":
                 var data = $formRegister.serialize();
-                console.log(data);
+                 // console.log(data);
+                var request= $.ajax({
+                    type : "POST",
+                    url  : "/projet/signup_process.php",
+                    data : data,
+                    dataType: "html"});
+                request.done(function(response)
+                {
+                    console.log(response);
+                    if(response=="ok"){
+                        msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "success", "glyphicon-ok", "Thanks for register");
+                        setTimeout(' window.location.href = "index.php"; ',2000);
+                    }
+                    else{
+
+                        msgChange($('#div-register-msg'), $('#icon-register-msg'), $('#text-register-msg'), "error", "glyphicon-remove", "Regiter error");
+                    }
+
+                });
+                request.fail(function( jqXHR, textStatus ) {
+                    alert( "Request failed: " + textStatus );
+                });
 
 
                 return false;

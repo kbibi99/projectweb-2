@@ -16,6 +16,11 @@
         $_SESSION['user_session'] = $user->getId();
         $_SESSION['user_name'] = $user->getUsername();
         $_SESSION['account_type'] = $user->getAccountType();
+        if(isset($_POST['remeber_me'])){
+            setcookie("user",$user->getId(),time()+604800016,'/');
+            setcookie("username",$user->getUsername(),time()+604800016,'/');
+            setcookie("account",$user->getAccountType(),time()+604800016,'/');
+        }
         echo "ok";
     }
     else{

@@ -9,6 +9,12 @@
 	session_start();
 	unset($_SESSION['user_session']);
     unset($_SESSION['user_session']);
+    unset($_COOKIE["user"]);
+    unset($_COOKIE["username"]);
+    unset($_COOKIE["account"]);
+setcookie('user', null, time()-60480455516, '/');
+setcookie('username', null, time()-60480455516, '/');
+setcookie('account', null, time()-60480455516 , '/');
 
 
 	if(session_destroy())

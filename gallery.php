@@ -68,7 +68,7 @@ session_start();
 						<a class="page-scroll" href="gallery.php">Nos Solutions</a>
 					</li>
 					<li>
-						<a class="page-scroll dropdown-toggle" href="service.php">Nos Services</a>
+						<a class="page-scroll" href="service.php">Nos Services</a>
 					</li>
 					<li>
 						<a class="page-scroll" href="contact.php">Contact</a>
@@ -81,21 +81,18 @@ session_start();
 						</li>
 					<?php } else {?>
 						<li>
-
 							<a   id="menu1" data-target="#dropdown" data-toggle="dropdown"><?php echo $_SESSION['user_name']." " ?><span <i class="fa fa-chevron-down"</i></span></a>
-							<div class="dropdown" id="dropdown">
-								<ul class="dropdown-menu" role="menu" aria-labelledby="menu1">
-									<?php  if($_SESSION['account_type']==2) {echo '<li role="presentation"><a role="menuitem" href="#">Panier</a></li>';}
-									else{ echo '<li role="presentation"><a role="menuitem" href="Admin">Admin Panel</a></li>';}?>
-
-									<li class="divider-vertical"></li>
-									<li role="presentation"><a role="menuitem" href="#">Profile</a></li>
-									<li role="presentation"><a role="menuitem" href="#">JavaScript</a></li>
-									<li role="presentation" class="divider"></li>
-									<li role="presentation"><a role="menuitem" href="logout.php" >Logout</a></li>
-								</ul>
-							</div>
+							<ul class="dropdown-menu dropdown-menu-right " role="menu" aria-labelledby="menu1">
+								<?php  if($_SESSION['account_type']==2) {echo '<li role="presentation"><a role="menuitem" href="#">Panier</a></li>';}
+								else{ echo '<li  class="dropdown-click" role="presentation"><a role="menuitem"   href="Admin">Admin Panel</a></li>';}?>
+								<li class="divider-vertical"></li>
+								<li class="page-scroll" role="presentation"><a role="menuitem" href="#">Profile</a></li>
+								<li role="presentation"><a role="menuitem" href="#">JavaScript</a></li>
+								<li role="presentation" class="divider"></li>
+								<li role="presentation"><a role="menuitem" href="logout.php" >Logout</a></li>
+							</ul>
 						</li>
+
 					<?php }?>
 
 				</ul>
@@ -147,13 +144,13 @@ session_start();
 					<!-- End # Login Form -->
 
 					<!-- Begin | Lost Password Form -->
-					<form id="lost-form" style="display:none;">
+					<form id="lost-form" style="display:none;" method="post">
 						<div class="modal-body">
 							<div id="div-lost-msg">
 								<div id="icon-lost-msg" class="glyphicon glyphicon-chevron-right"></div>
 								<span id="text-lost-msg">Type your e-mail.</span>
 							</div>
-							<input id="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
+							<input id="lost_email"  name="lost_email" class="form-control" type="text" placeholder="E-Mail" required>
 						</div>
 						<div class="modal-footer">
 							<div>
@@ -175,8 +172,8 @@ session_start();
 								<span id="text-register-msg" style="" >Register an account.</span>
 							</div>
 							<input id="register_username" name="register_username" class="form-control" type="text" placeholder="Username" required>
-							<input id="register_firsName" name="register_firsName" class="form-control" type="password" placeholder="First Name" required>
-							<input id="register_Second Name"name="register_Second Name" class="form-control" type="password" placeholder="Second Name" required>
+							<input id="register_firsName" name="register_firsName" class="form-control" type="text" placeholder="First Name" required>
+							<input id="register_SecondName"name="register_SecondName" class="form-control" type="text" placeholder="Second Name" required>
 							<input id="register_email" name="register_email" class="form-control" type="text" placeholder="E-Mail" required>
 							<input id="register_password" name="register_password" class="form-control" type="password" placeholder="Password" required>
 						</div>

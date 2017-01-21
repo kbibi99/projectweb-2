@@ -280,6 +280,18 @@ hr{max-width: 50px;
 	.navbar-default h1.navbar-brand {font-family: "Pacifico",sans-serif;font-size: 25px;font-weight: 500;margin: 0;}
 	.navbar-default h1.navbar-brand a{color: #fff !important;}
 	.navbar-default .nav li a{color: #fff}
+
+  .dropdown-menu{
+        display: block;
+        position: relative;
+        background-color: transparent;
+        box-shadow: none;
+        border: none;
+      padding-left: 9px;
+    }
+  .dropdown-menu .divider {
+      display: none;
+  }
 }
 
 /* Carousel Styles */
@@ -655,4 +667,12 @@ ol.type li a:hover {background: #FFB246;color: #fff;}
 .m-wrap{
     padding-bottom: 0;
 }
+
+
+
+
+
+
+
+
 
