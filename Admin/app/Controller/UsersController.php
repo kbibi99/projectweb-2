@@ -16,6 +16,12 @@ class UsersController extends AppController {
 		$this->User->recursive = 0;
 		$this->set('users', $this->paginate());
 	}
+        
+        public function logout() {
+
+         $this->redirect('http://localhost:200/projet/logout.php');
+    
+	}
 
 /**
  * view method

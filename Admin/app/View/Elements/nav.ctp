@@ -16,7 +16,7 @@
 </div>
 <ul>
     <li>
-        <a href="<?php echo $this->webroot;?>Users/login">
+        <a href="<?php echo $this->webroot;?>Users/logout">
             <i class="fa fa-power-off"></i>
         </a>
     </li>

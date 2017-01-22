@@ -1,6 +1,11 @@
 
 <?php
 session_start();
+if (isset($_COOKIE["user"])){
+	$_SESSION['user_session']=$_COOKIE["user"];
+	$_SESSION['user_name']=$_COOKIE["username"];
+	$_SESSION['account_type']=$_COOKIE["account"];
+}
 ?>
 
 <!DOCTYPE html>
