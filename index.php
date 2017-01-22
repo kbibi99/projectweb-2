@@ -247,8 +247,8 @@ if (isset($_COOKIE["user"])){
 						<div class="wrap-img">
 							<img src="images/key.png" />
 						</div>
-						<h3 class="services-heading">Text Heading A</h3>
-						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quo. Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. </p>
+						<h3 class="services-heading">UN SITE WEB UNIQUE ET ACCROCHEUR</h3>
+						<p>Avec une conception attrayante et professionnelle vous allez attirer l’attention des clients qui recherchent vos services et ils navigueront plus longtemps sur votre site internet. </p>
 					</div>
 				</div>
 				<div class="col-sm-4">
@@ -257,8 +257,8 @@ if (isset($_COOKIE["user"])){
 							<div class="wrap-img">
 								<img src="images/money.png" />
 							</div>
-							<h3 class="services-heading">Text Heading B</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quo. Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. </p>
+							<h3 class="services-heading">TRANSFORMER LES VISITES EN CLIENTS PAYANT</h3>
+							<p>Les visites générées par votre site à chaque heures se transformeront en appels par les clients ainsi qu’en vente en ligne et augmenterons visiblement votre chiffre d’affaires.</p>
 						</div>
 					</div>
 				</div>
@@ -268,8 +268,8 @@ if (isset($_COOKIE["user"])){
 							<div class="wrap-img">
 								<img src="images/days.png" />
 							</div>
-							<h3 class="services-heading">Text Heading C</h3>
-							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Minima quo. Aenean feugiat in ante et blandit. Vestibulum posuere molestie risus, ac interdum magna porta non. </p>
+							<h3 class="services-heading">UN MAXIMUM DE VISITES SUR VOTRE SITE WEB</h3>
+							<p>Grâce à nos garanties de Visibilité vous allez attirer un maximum d’internautes parmi les milliers qui cherchent vos services sur le net à chaque moment de la journée.</p>
 						</div>
 					</div>
 				</div>
